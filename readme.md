@@ -6,16 +6,15 @@
 | 型号 | 华为 Matebook 14 2020 (KLVC-WFE9L) |
 | CPU | Intel Core i7 10510U |
 | 内存 | 16 GB 2133 MHz LPDDR3 |
-| 显卡 | Intel Comet Lake-U GT2 (UHD Graphics 620) & NVIDIA GeForce MX350 |
+| GPU | Intel Comet Lake-U GT2 (UHD Graphics 620) & NVIDIA GeForce MX350 |
 | 硬盘 | WD SN730 512G |
 | 声卡 | Realtek ALC256 |
 | 无线网卡 | Intel Wireless-AC 9560 |
-| 显示屏 | 奇美 CMN8C02 (P140ZKA-BZ1) |
-| 分辨率 | 2160*1440 |
+| 显示屏 | 奇美 CMN8C02 (P140ZKA-BZ1) 2160*1440 |
 
 ### 支持
-* CPU 睿频
-* GPU 核显（仿冒 UHD 630，性能更接近原生）
+* CPU（支持睿频）
+* 核显（仿冒 UHD 630，性能更接近原生）
 * 睡眠和休眠
 * USB 3.0/2.0
 * 触控板/触摸屏（最新修复适配）
