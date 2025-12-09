@@ -1,22 +1,16 @@
-# Matebook 14 2020 (16+512G i7-10510U MX350) OpenCore 黑苹果 hackintosh
-  
-### 安装方式
-* (速度比较慢)通过下载Releases里最新EFI文件，使用原版DMG安装镜像，通过U盘安装！！
-* (速度极快)通过末尾提供的华为Matebook14黑苹果1分钟极速安装黑苹果整合镜像，通过R drive image7工具进行恢复安装，此镜像整合原版系统模块以及OC引导模块，详细安装教程可参考末尾视频链接！！
-### 注意
-* 此EFI文件推荐安装Macos14.7.2，15系统也可以安装，但进系统后仍需要打OCLP驱动，否则WIFI和蓝牙将无法正常工作！！
-* 此EFI的OPENCORE版本为1.0.4，后期随着Opencore官方升级，也将上传最新EFI文件！！
+# Matebook 14 2020 (i7-10510U MX350) OpenCore 黑苹果 hackintosh
+
 ### 机型配置信息
 | 项目 | 详细参数|
 | :--: | :-------------------- |
-| 型号 | 华为Matebook 14    |
-| CPU  | I5 8265u |
-|内存| DDR3L 8G|
-| 显卡 | UHD620&MX250|
-| 硬盘 | WD SN720 512G|
-| 声卡 | Realtek ALC256 |
+| 型号 | 华为 Matebook 14 2020 |
+| CPU | Intel Core i7 10510U |
+| 内存 | 16 GB 2133 MHz LPDDR3 |
+| 显卡 | Intel UHD Graphics 630 & Nvidia MX 350 |
+| 硬盘 | WD SN750 512G |
+| 声卡 | Realtek ALC 256 |
 | 无线网卡 | Intel wireless AC9560 |
-|分辨率| 2160*1440|
+| 分辨率 | 2160*1440 |
 ### 已经驱动
 * CPU睿频
 * 睡眠
