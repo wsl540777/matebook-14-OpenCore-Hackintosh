@@ -1,18 +1,39 @@
-# Matebook 14 2020 (16+512G MX350) OpenCore 黑苹果 hackintosh
+# Matebook 14 2020 (16+512G i7-10510U MX350) OpenCore 黑苹果 hackintosh
   
-在 ske1996 大神原版 EFI 的基础上自行升级 OC 和 kext 并稍加修改，现已几乎完美适配 macOS Ventura 13.0。使用前请自行注入三码（推荐使用 [OC Auxiliary Tools](https://github.com/ic005k/OCAuxiliaryTools)，Win/mac 下都能使用），默认伪装机型 MacBook Pro (16 英寸，2019) 。详细安装步骤见 ske1996 原[项目说明](https://github.com/ske1996/matebook-13and14-OpenCore-Hackintosh/blob/master/readme.md)。
-
-无法正常工作的部件与功能：
-
-1.摄像头
-
-2.MX350独显
-
-3.指纹
-
-4.触屏（Voodool2C 有兼容性问题）
-
-5.隔空投送，随航（既有问题，Intel 网卡原因无解）
-
-
-注：本人不是黑苹果老手，在查阅各种论坛，经历两周的摸索才尝试成功。由于手上只有一台 Matebook14 2020，测试条件有限，只能尽力维护，请见谅。
+### 安装方式
+* (速度比较慢)通过下载Releases里最新EFI文件，使用原版DMG安装镜像，通过U盘安装！！
+* (速度极快)通过末尾提供的华为Matebook14黑苹果1分钟极速安装黑苹果整合镜像，通过R drive image7工具进行恢复安装，此镜像整合原版系统模块以及OC引导模块，详细安装教程可参考末尾视频链接！！
+### 注意
+* 此EFI文件推荐安装Macos14.7.2，15系统也可以安装，但进系统后仍需要打OCLP驱动，否则WIFI和蓝牙将无法正常工作！！
+* 此EFI的OPENCORE版本为1.0.4，后期随着Opencore官方升级，也将上传最新EFI文件！！
+### 机型配置信息
+| 项目 | 详细参数|
+| :--: | :-------------------- |
+| 型号 | 华为Matebook 14    |
+| CPU  | I5 8265u |
+|内存| DDR3L 8G|
+| 显卡 | UHD620&MX250|
+| 硬盘 | WD SN720 512G|
+| 声卡 | Realtek ALC256 |
+| 无线网卡 | Intel wireless AC9560 |
+|分辨率| 2160*1440|
+### 已经驱动
+* CPU睿频
+* 睡眠
+* 录音
+* 扬声器/耳麦
+* 触摸板/手势
+* USB3.0/2.0
+* 外接显示器HDMI
+* 蓝牙
+* 无线网卡
+### 无法驱动
+* 摄像头
+* MX250独显
+### 补充说明
+* 如果本机自带硬盘为三星pm981或者pm991，需拆机更换！！
+* EFI里的Config配置文件Smibios机型设置为MacBookPro16,3，使用前需要自己使用OCAT工具生成三码！！
+### 推荐
+* 本EFI推荐恢复版安装，可参考我的B站主页里的华为Matebook14黑苹果1分钟极速安装教程：https://space.bilibili.com/245094126?spm_id_from=333.1007.0.0
+* 1分钟极速安装所需文件下载链接：https://www.123684.com/s/p5tpjv-XBl5v
+* 最后祝大家，黑果一切顺利！！
