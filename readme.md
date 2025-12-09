@@ -1,4 +1,4 @@
-# Matebook 14 2020 (i7-10510U MX350) OpenCore Hackintosh for Tahoe 26.2
+# Matebook 14 2020 OpenCore Hackintosh for Tahoe 26.2
 
 ### 机型配置信息
 | 项目 | 详细参数|
