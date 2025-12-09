@@ -1,4 +1,4 @@
-# Matebook 14 2020 (i7-10510U MX350) OpenCore 黑苹果 hackintosh
+# Matebook 14 2020 (i7-10510U MX350) OpenCore 黑苹果 Hackintosh Tahoe 26.2
 
 ### 机型配置信息
 | 项目 | 详细参数|
@@ -6,10 +6,11 @@
 | 型号 | 华为 Matebook 14 2020 |
 | CPU | Intel Core i7 10510U |
 | 内存 | 16 GB 2133 MHz LPDDR3 |
-| 显卡 | Intel UHD Graphics 630 & Nvidia MX 350 |
-| 硬盘 | WD SN750 512G |
-| 声卡 | Realtek ALC 256 |
-| 无线网卡 | Intel wireless AC9560 |
+| 显卡 | Intel UHD Graphics 630 & NVIDIA GeForce MX350 |
+| 硬盘 | WD SN730 512G |
+| 声卡 | Realtek ALC256 |
+| 无线网卡 | Intel Wireless-AC 9560 |
+| 显示屏 | 奇美 CMN8C02 (P140ZKA-BZ1) |
 | 分辨率 | 2160*1440 |
 ### 已经驱动
 * CPU睿频
