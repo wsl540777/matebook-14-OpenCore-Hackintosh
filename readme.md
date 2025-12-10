@@ -42,42 +42,42 @@
   * 方法一：从 U 盘使用官方 Recovery 安装（仅需一个 U 盘，无需自行下载完整系统镜像）
     1. 做好原有系统备份和 EFI 分区备份；
     2. 系统分区的准备
-       1. EFI 分区扩容：制作一个 U 盘启动盘（推荐 [HotPE](https://www.hotpe.top/)，功能全，可联网），在 PE 下对电脑 EFI 分区扩容，扩容至 300MB；
-       2. 使用分区工具为 macOS 系统创建分区（系统占用 20GB，完成安装至少需要 60GB，长期使用建议至少160G，酌情安排），格式化为任意分区格式均可，安装系统时会再次抹掉。
+       1) EFI 分区扩容：制作一个 U 盘启动盘（推荐 [HotPE](https://www.hotpe.top/)，功能全，可联网），在 PE 下对电脑 EFI 分区扩容，扩容至 300MB；
+       2) 使用分区工具为 macOS 系统创建分区（系统占用 20GB，完成安装至少需要 60GB，长期使用建议至少160G，酌情安排），格式化为任意分区格式均可，安装系统时会再次抹掉。
     3. 恢复分区的准备
-       1. 从此处下载 Tahoe 的 Recovery Boot，解压后为一个 com.apple.recovery.boot 文件夹；
-       2. U 盘创建一个 2G 大小的 FAT32 分区，复制一份准备好的的 EFI 文件夹，和com.apple.recovery.boot 文件夹一起放在该分区的根目录下；
-       3. 进入 EFI > OC > Kext > itlwm.kext > Contents > Info.plist 用记事本打开，找到 WiFi_1，修改 ssid 和 password 对应的 string 值为要连接的 Wi-Fi 名称和密码，保存退出。
+       1) 从此处下载 Tahoe 的 Recovery Boot，解压后为一个 com.apple.recovery.boot 文件夹；
+       2) U 盘创建一个 2G 大小的 FAT32 分区，复制一份准备好的的 EFI 文件夹，和com.apple.recovery.boot 文件夹一起放在该分区的根目录下；
+       3) 进入 EFI > OC > Kext > itlwm.kext > Contents > Info.plist 用记事本打开，找到 WiFi_1，修改 ssid 和 password 对应的 string 值为要连接的 Wi-Fi 名称和密码，保存退出。
     4. 系统安装
-       1. 重新启动，按 F2 进入 BIOS，关闭 安全启动 和 安全芯片；
-       2. BIOS 中选择刚才配置的 U 盘恢复分区启动，选择黄色齿轮的 Recovery 26.0 (Portable)；
-       3. 进入恢复分区后选择 磁盘工具， 将准备安装 macOS 的分区抹掉成 APFS 格式；
-       4. 退出磁盘工具，选择 重新安装 macOS Tahoe；
-       5. 如果能够进入安装界面且能够看到用户协议，说明上一步的网络配置是成功的。选择刚才抹掉的系统盘，按照提示安装 macOS，期间可能会多次重启；
-       6. 完成初次激活，**选择不启用文件保险箱加密**；
-       7. 进入 macOS， 安装 Heliport 客户端，以便后续连接 Wi-Fi。
+       1) 重新启动，按 F2 进入 BIOS，关闭 安全启动 和 安全芯片；
+       2) BIOS 中选择刚才配置的 U 盘恢复分区启动，选择黄色齿轮的 Recovery 26.0 (Portable)；
+       3) 进入恢复分区后选择 磁盘工具， 将准备安装 macOS 的分区抹掉成 APFS 格式；
+       4) 退出磁盘工具，选择 重新安装 macOS Tahoe；
+       5) 如果能够进入安装界面且能够看到用户协议，说明上一步的网络配置是成功的。选择刚才抹掉的系统盘，按照提示安装 macOS，期间可能会多次重启；
+       6) 完成初次激活，**选择不启用文件保险箱加密**；
+       7) 进入 macOS， 安装 Heliport 客户端，以便后续连接 Wi-Fi。
     5. 拷贝 EFI 分区
-       1. 重新启动，进入 PE 系统，将准备好的 EFI 文件夹拷贝到电脑硬盘的 EFI 分区， 使用 EasyUEFI （链接）添加引导项（[教程](https://www.bilibili.com/opus/872635104279658505)）；
-       2. 重新启动，拔掉 U 盘，选择电脑硬盘中的 OpenCore 引导项，进入 macOS，安装完成。
+       1) 重新启动，进入 PE 系统，将准备好的 EFI 文件夹拷贝到电脑硬盘的 EFI 分区， 使用 EasyUEFI （链接）添加引导项（[教程](https://www.bilibili.com/opus/872635104279658505)）；
+       2) 重新启动，拔掉 U 盘，选择电脑硬盘中的 OpenCore 引导项，进入 macOS，安装完成。
   * 方法二：从 U 盘使用完整的系统镜像包安装（需要至少两个 U 盘，且需要自行下载 .dmg 或 .iso 格式系统镜像）
     1. 做好原有系统备份和 EFI 分区备份；
     2. 系统分区的准备
-       1. EFI 分区扩容：制作一个 U 盘启动盘（推荐 [HotPE](https://www.hotpe.top/)，功能全，可联网），在 PE 下对电脑 EFI 分区扩容，扩容至 300MB；
-       2. 使用分区工具为 macOS 系统创建分区（系统占用 20GB，完成安装至少需要 60GB，长期使用建议至少160G，酌情安排），格式化为任意分区格式均可，安装系统时会再次抹掉。
+       1) EFI 分区扩容：制作一个 U 盘启动盘（推荐 [HotPE](https://www.hotpe.top/)，功能全，可联网），在 PE 下对电脑 EFI 分区扩容，扩容至 300MB；
+       2) 使用分区工具为 macOS 系统创建分区（系统占用 20GB，完成安装至少需要 60GB，长期使用建议至少160G，酌情安排），格式化为任意分区格式均可，安装系统时会再次抹掉。
     3. 安装盘的准备
-       1. 用另一个 U 盘制作 macOS 安装介质（[教程](https://sysin.org/blog/macos-createinstallmedia-windows/)）；
-       2. 按照[这个教程](https://www.mfpud.com/topics/930/)在 文件资源管理器 挂载 EFI 分区，并将准备好的 EFI 文件夹替换进去。
+       1) 用另一个 U 盘制作 macOS 安装介质（[教程](https://sysin.org/blog/macos-createinstallmedia-windows/)）；
+       2) 按照[这个教程](https://www.mfpud.com/topics/930/)在 文件资源管理器 挂载 EFI 分区，并将准备好的 EFI 文件夹替换进去。
     4. 系统安装
-       1. 重新启动，按 F2 进入 BIOS，关闭 安全启动 和 安全芯片；
-       2. BIOS 中选择刚才配置的 U 盘安装盘启动，选择黄色的 Install macOS Tahoe；
-       3. 进入安装盘后选择 磁盘工具， 将准备安装 macOS 的分区抹掉成 APFS 格式；
-       4. 退出磁盘工具，选择 安装 macOS Tahoe；
-       5. 选择刚才抹掉的系统盘，按照提示安装 macOS，期间可能会多次重启；
-       6. 完成初次激活，**选择不启用文件保险箱加密**；
-       7. 进入 macOS， 安装 Heliport 客户端，以便后续连接 Wi-Fi。
+       1) 重新启动，按 F2 进入 BIOS，关闭 安全启动 和 安全芯片；
+       2) BIOS 中选择刚才配置的 U 盘安装盘启动，选择黄色的 Install macOS Tahoe；
+       3) 进入安装盘后选择 磁盘工具， 将准备安装 macOS 的分区抹掉成 APFS 格式；
+       4) 退出磁盘工具，选择 安装 macOS Tahoe；
+       5) 选择刚才抹掉的系统盘，按照提示安装 macOS，期间可能会多次重启；
+       6) 完成初次激活，**选择不启用文件保险箱加密**；
+       7) 进入 macOS， 安装 Heliport 客户端，以便后续连接 Wi-Fi。
     5. 拷贝 EFI 分区
-       1. 重新启动，进入 PE 系统，将准备好的 EFI 文件夹拷贝到电脑硬盘的 EFI 分区， 使用 EasyUEFI （链接）添加引导项（[教程](https://www.bilibili.com/opus/872635104279658505)）；
-       2. 重新启动，拔掉 U 盘，选择电脑硬盘中的 OpenCore 引导项，进入 macOS，安装完成。
+       1) 重新启动，进入 PE 系统，将准备好的 EFI 文件夹拷贝到电脑硬盘的 EFI 分区， 使用 EasyUEFI （链接）添加引导项（[教程](https://www.bilibili.com/opus/872635104279658505)）；
+       2) 重新启动，拔掉 U 盘，选择电脑硬盘中的 OpenCore 引导项，进入 macOS，安装完成。
 * 从原有 macOS 安装：
   1. 备份原有 EFI；
   2. 替换新 EFI；
